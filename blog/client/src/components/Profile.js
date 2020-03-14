@@ -27,9 +27,10 @@ function Profile(props) {
             <p>Location: {user.location}</p>
             <p>Gender: {user.gender}</p>
             <p>Interests: {user.interests}</p>
-            <Link to={`/profile/${id}/edit`}>Edit Profile Info</Link>
+            <Link to={`/profile/${id}/edit`}>Edit Profile</Link>
+            <br></br>
             <Link to={`/posts/${id}`}>My Posts</Link>
-
+            <br></br>
             <button onClick={()=> {destroyUser(id)}}>Delete Account</button>
             {/* anonymous arrow, in this circumstance allows parenthesis with function, prevents crash */}
 
