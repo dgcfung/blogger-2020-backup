@@ -16,7 +16,6 @@ import CreateNewPost from './components/CreateNewPost'
 import Comment from './components/Comment'
 import CreateComment from './components/CreateComment'
 
-// new repo test
 
 import {
   registerUser,
