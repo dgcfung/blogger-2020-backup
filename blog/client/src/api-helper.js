@@ -67,15 +67,16 @@ const createPost = async (id, post) => {
 }
 
 export const createComment= async(id, formValues)=>{
-  const res = await api.post(`/users/${id}/comment`, {formValues})
+  const res = await api.post(`/users/:${id}/comment`, {formValues})
   return res
 }
 
 const readAllUserPosts = async (id) => {
-  console.log(id)
-  const resp = await api.get(`/posts/${id}`)
+  const resp = await api.get(`/all_posts`)
   console.log(resp)
   return resp.data
+
+  // /users/:user_id/posts(.:format) 
 }
 
 //   need check route

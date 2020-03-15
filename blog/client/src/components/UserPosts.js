@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 // import {BrowserRouter, Link} from 'react-router-dom'
 import {
     BrowserRouter as Router,
@@ -26,22 +26,27 @@ function UserPosts(props) {
     //     // need to map posts
     // }
 
-    useEffect(()=> {
+    useEffect(() => {
         const readPosts = async () => {
             let posts = await readAllUserPosts(id)
-            console.log(posts)
-            setPost(posts.body)
+            setPost(posts)
         }
         readPosts()
     }, [])
 
+    console.log(post, 'line 38')
+
+
+    
     return (
 
         <div className="Posts">
             <h1>User Posts</h1>
-            <p>{post}</p>
+            {post && post.map(post => (
+                <div>{post.body}</div>
+            ))}
             <button type="button" onClick={handleClick}> Create New Post
-    </button>
+            </button>
         </div>
 
     );
