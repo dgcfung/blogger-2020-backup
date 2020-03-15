@@ -12,7 +12,7 @@ require 'faker'
 User.create(email:"don@don.com", password:"password",age:25, location:"New York", gender:"male", interests:"Karaoke")
 User.create(email: "trevorh@gmail.com", password:"password")
 
-@current_user = User.find(2)
+@current_user = User.find(1)
 5.times do 
     @post = @current_user.posts.build(body: Faker::Lorem.paragraphs)
     @post.save

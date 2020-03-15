@@ -33,7 +33,6 @@ function Profile(props) {
             <br></br>
             <br></br>
             <br></br>
-            <button onClick={()=> {destroyUser(id)}}>Delete Account</button>
             {/* anonymous arrow, in this circumstance allows parenthesis with function, prevents crash */}
 
 

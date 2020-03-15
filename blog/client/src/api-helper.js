@@ -72,7 +72,9 @@ export const createComment= async(id, formValues)=>{
 }
 
 const readAllUserPosts = async (id) => {
+  console.log(id)
   const resp = await api.get(`/posts/${id}`)
+  console.log(resp)
   return resp.data
 }
 

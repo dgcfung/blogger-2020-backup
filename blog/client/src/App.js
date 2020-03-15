@@ -7,7 +7,7 @@ import About from './components/About'
 import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'
 import Profile from './components/Profile'
-import EditProfile from './components/EditProfile';
+import EditProfile from './components/EditProfile'
 import Post from './components/Post'
 import EditPost from './components/EditPost'
 import UserPosts from './components/UserPosts'
@@ -69,6 +69,7 @@ handleSignIn = async(e)=>{
 }
 
 render () {
+  console.log(this.props)
   let {email, password} =this.state.authFormData
   return (
       <React.Fragment>

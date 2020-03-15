@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 // import {BrowserRouter, Link} from 'react-router-dom'
 import {
     BrowserRouter as Router,
@@ -9,6 +9,10 @@ import {
 import { readAllUserPosts } from '../api-helper'
 
 function UserPosts(props) {
+
+    const [post, setPost] = useState()
+
+    console.log(props)
     let id = props.match.params.user_id
     const linkId = `/posts/${id}/create`
 
@@ -16,10 +20,26 @@ function UserPosts(props) {
         props.history.push(`/posts/${id}/create`);
     }
 
+    // const readPosts = async () => {
+    //     let posts = await readAllUserPosts(id)
+    //     console.log(posts)
+    //     // need to map posts
+    // }
+
+    useEffect(()=> {
+        const readPosts = async () => {
+            let posts = await readAllUserPosts(id)
+            console.log(posts)
+            setPost(posts.body)
+        }
+        readPosts()
+    }, [])
+
     return (
 
         <div className="Posts">
             <h1>User Posts</h1>
+            <p>{post}</p>
             <button type="button" onClick={handleClick}> Create New Post
     </button>
         </div>
