@@ -3,8 +3,9 @@ import {createPost} from '../api-helper'
 
 
 function CreateNewPost (props){
-
+    console.log(props)
     let id = props.match.params.user_id
+    
     const [formValues, setFormValues] = useState({
         title: '',
         body: ''
@@ -22,12 +23,13 @@ function CreateNewPost (props){
 
     const handleSubmit = async(e) => {
         e.preventDefault()
-        console.log(formValues)
         let res = await createPost(id, formValues)
         console.log(res)
         if(res.status === 201){
             console.log(res.status)
-        props.history.push(`/posts/:user_id/:post_id`)
+            let postId= res.data.id
+            console.log(postId)
+        props.history.push(`/posts/${id}/${postId}`)
         }
 
     }
