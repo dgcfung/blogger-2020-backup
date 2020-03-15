@@ -58,6 +58,7 @@ export const readUser = async (id) => {
 const destroyUser = async (id) => {
   const resp = await api.delete(`/users/${id}`)
   return resp.data
+  console.log(resp.status)
 }
 
 const createPost = async (id, post) => {

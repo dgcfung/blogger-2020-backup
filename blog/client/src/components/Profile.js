@@ -29,7 +29,7 @@ function Profile(props) {
             <p>Interests: {user.interests}</p>
             <Link to={`/profile/${id}/edit`}>Edit Profile</Link>
             <br></br>
-            <Link to={`/posts/${id}`}>My Posts</Link>
+            <Link to={`/posts/all/${id}`}>My Posts</Link>
             <br></br>
             <br></br>
             <br></br>

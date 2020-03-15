@@ -8,11 +8,11 @@
 
 require 'faker'
 
-
 # seed one user
-user= User.create( email: 'trevorh@gmail.com', password: 'password')
+User.create(email:"don@don.com", password:"password",age:25, location:"New York", gender:"male", interests:"Karaoke")
+User.create(email: "trevorh@gmail.com", password:"password")
 
-@current_user = User.find(1)
+@current_user = User.find(2)
 5.times do 
     @post = @current_user.posts.build(body: Faker::Lorem.paragraphs)
     @post.save

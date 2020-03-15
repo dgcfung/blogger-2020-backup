@@ -85,7 +85,7 @@ render () {
         <Route exact path= "/profile/:user_id/edit" component={EditProfile}/>
         <Route exact path="/posts/:user_id/:post_id" component={Post}/>
         <Route exact path= "/posts/:user_id/create" component={CreateNewPost}/>
-        <Route exact path="/posts/:user_id" component={UserPosts}/>
+        <Route exact path="/posts/all/:user_id" component={UserPosts}/>
         <Route exact path= "/posts/comments/create" component= {CreateComment}/>
         <Footer/>
       </React.Fragment>
