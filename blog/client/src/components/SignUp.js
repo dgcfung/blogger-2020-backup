@@ -1,5 +1,4 @@
 import React from 'react'
-import { loginUser } from '../api-helper'
 
 function SignUp(props) {
     

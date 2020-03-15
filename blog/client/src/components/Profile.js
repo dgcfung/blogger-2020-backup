@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import { readUser, destroyUser } from '../api-helper'
+import { readUser, getUser, destroyUser } from '../api-helper'
 
 function Profile(props) {
     let id = props.match.params.user_id
@@ -30,6 +30,8 @@ function Profile(props) {
             <Link to={`/profile/${id}/edit`}>Edit Profile</Link>
             <br></br>
             <Link to={`/posts/${id}`}>My Posts</Link>
+            <br></br>
+            <br></br>
             <br></br>
             <button onClick={()=> {destroyUser(id)}}>Delete Account</button>
             {/* anonymous arrow, in this circumstance allows parenthesis with function, prevents crash */}

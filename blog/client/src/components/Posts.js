@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react'
 
 function Posts(props) {
     let id = props.match.params.user_id

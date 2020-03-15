@@ -1,5 +1,4 @@
 import axios from 'axios'
-import App from './App'
 
 const baseURL = 'http://localhost:3000'
 
