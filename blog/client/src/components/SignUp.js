@@ -1,7 +1,7 @@
 import React from 'react'
 
 function SignUp(props) {
-    
+    // create user
     return (
         <>
             <h1>Sign Up</h1>

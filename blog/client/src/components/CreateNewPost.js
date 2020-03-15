@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import {createPost} from '../api-helper'
+import { useHistory } from 'react-router-dom'
 
 
 function CreateNewPost (props){
+    let history = useHistory()
     console.log(props)
     let id = props.match.params.user_id
     
@@ -29,7 +31,7 @@ function CreateNewPost (props){
             console.log(res.status)
             let postId= res.data.id
             console.log(postId)
-        props.history.push(`/posts/${id}/${postId}`)
+        history.push(`/posts/all/${id}`)
         }
 
     }

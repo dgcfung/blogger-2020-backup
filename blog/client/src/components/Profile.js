@@ -1,9 +1,10 @@
 import React, { useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { readUser, getUser, destroyUser } from '../api-helper'
 import axios from 'axios'
 
 function Profile(props) {
+    let history = useHistory()
     let id = props.match.params.user_id
 
     const [user, setUser] = useState({})
@@ -18,6 +19,8 @@ function Profile(props) {
         setUser(user)
     }
 
+
+    // delete user
     const deleteUser = async () => {
         let del = await axios({
             method: 'delete',
@@ -25,6 +28,7 @@ function Profile(props) {
             headers: {Authorization: `Bearer ${localStorage.getItem('authToken')}` }
         })
         console.log('User deleted')
+        history.push(`/`)
     }
 
     return (

@@ -37,23 +37,24 @@ function UserPosts(props) {
 
     console.log(post, 'line 38')
 
-    const deletePost = async (id) => {
-        let del = await axios({
-            method: 'delete',
-            url: `http://localhost:3000/posts/${id}`,
-            headers: {Authorization: `Bearer ${localStorage.getItem('authToken')}` }
-        })
-    }
+    // const deletePost = async (id) => {
+    //     let del = await axios({
+    //         method: 'delete',
+    //         url: `http://localhost:3000/posts/${id}`,
+    //         headers: {Authorization: `Bearer ${localStorage.getItem('authToken')}` }
+    //     })
+    // }
 
 
-    
     return (
-
+        // read all posts
         <div className="Posts">
             <h1>User Posts</h1>
             {post && post.map(post => (
-                <div>{post.body}
-                <button onClick={deletePost(post.id)}>Delete Post</button>
+                <div>
+                    <p>{post.title}</p>
+                    <p>{post.body}</p>
+                {/* <button onClick={deletePost(post.id)}>Delete Post</button> */}
                 </div>
                 
             ))}
