@@ -22,14 +22,16 @@ function CreateNewPost (props){
 
     const handleSubmit = async(e) => {
         e.preventDefault()
-        console.log(e)
+        console.log(formValues)
         let res = await createPost(id, formValues)
         console.log(res)
-        if(res.status === 200){
-        props.history.push(`/users/${id}/posts`)
+        if(res.status === 201){
+            console.log(res.status)
+        props.history.push(`/posts/:user_id/:post_id`)
         }
 
     }
+    
 
 
     return(

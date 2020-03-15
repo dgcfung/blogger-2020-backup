@@ -8,7 +8,7 @@ import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'
 import Profile from './components/Profile'
 import EditProfile from './components/EditProfile';
-import Posts from './components/Posts'
+import Post from './components/Post'
 import EditPost from './components/EditPost'
 import UserPosts from './components/UserPosts'
 import CreateNewPost from './components/CreateNewPost'
@@ -83,7 +83,7 @@ render () {
         </Route>
         <Route exact path="/profile/:user_id" component={Profile}/>
         <Route exact path= "/profile/:user_id/edit" component={EditProfile}/>
-        <Route exact path="/posts/:user_id/:post_id" component={Posts}/>
+        <Route exact path="/posts/:user_id/:post_id" component={Post}/>
         <Route exact path= "/posts/:user_id/create" component={CreateNewPost}/>
         <Route exact path="/posts/:user_id" component={UserPosts}/>
         <Route exact path= "/posts/comments/create" component= {CreateComment}/>

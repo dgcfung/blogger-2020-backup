@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Posts(props) {
+function Post(props) {
     let id = props.match.params.user_id
     return (
         <div className="single-post">
@@ -13,4 +13,4 @@ function Posts(props) {
     )
 }
 
-export default Posts
+export default Post
