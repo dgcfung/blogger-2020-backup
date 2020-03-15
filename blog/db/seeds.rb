@@ -10,6 +10,7 @@ require 'faker'
 
 
 # seed one user
+user= User.create( email: 'trevorh@gmail.com', password: 'password')
 
 @current_user = User.find(1)
 5.times do 
