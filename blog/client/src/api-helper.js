@@ -43,7 +43,6 @@ const readAllUsers = async () => {
 }
 
 const updateUser = async (id, data) => {
-  console.log(id)
   const resp = await api.put(`/users/${id}`, { data })
   return resp
 

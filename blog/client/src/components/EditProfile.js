@@ -55,7 +55,7 @@ function EditProfile(props) {
             <input type="text" name="interests" className="post-body" placeholder="Interests" value={formValues.interests}></input>
             <p>Password</p>
             <input type="password" name="password" className="post-body" placeholder="password" value={formValues.password}></input>
-            <button className="button">Send</button>
+            <button className="button">Submit</button>
 
         </form>
 
