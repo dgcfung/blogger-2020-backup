@@ -39,8 +39,8 @@ function CreateNewPost (props){
         <form onChange={handleChange}
             onSubmit={handleSubmit}
         >
-            <p>Title:</p>
-            <input name="title" className="post-title" placeholder="Title" value ={formValues.title}/>
+            {/* <p>Title:</p>
+            <input name="title" className="post-title" placeholder="Title" value ={formValues.title}/> */}
             <p>Text:</p>
             <input name="body" className="post-body" placeholder="Body" value= {formValues.body}/>
 

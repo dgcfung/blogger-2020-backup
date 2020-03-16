@@ -82,11 +82,18 @@ const readAllPosts = async () => {
   return resp.data
 }
 
-//   check route
-const updatePost = async (user_id, post_id, formValues) => {
-  const resp = await api.post(`/posts/${user_id}/${post_id}/edit`, {formValues})
+
+const readAPost = async (id) => {
+  const resp = await api.get(`/posts/${id}`)
   return resp.data
 }
+
+//   check route
+const updatePost = async (post_id, post) => {
+  const resp = await api.put(`/posts/${post_id}`, {post})
+  return resp.data
+}
+
 
 const destroyPost = async (id) => {
   const resp = await api.delete(`/posts/${id}`)
@@ -103,7 +110,9 @@ export {
   readAllUserPosts,
   readAllPosts,
   updatePost,
-  destroyPost
+  readAPost,
+  destroyPost,
+  
 
 
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { updatePost, readUser } from '../api-helper'
+import { updatePost, readAPost } from '../api-helper'
 
 function EditPost (props){
 // need forms to edit post
@@ -22,15 +22,16 @@ const handleChange = (e) => {
 
 const handleSubmit = async (e) => {
     e.preventDefault()
-    let res = await updatePost(user_id, post_id, formValues)
-    if (res.status === 200) {
-        props.history.push(`/posts/${user_id}/${post_id}/edit`)
-    }
+    let res = await updatePost(post_id, formValues)
+    // if (res.status === 200) {
+        
+        props.history.push(`/posts/all/${user_id}`)
+    // }
 
 }
 
 const getPostInfo = async()=>{
-    let res = await updatePost(user_id, post_id, formValues)
+    let res = await readAPost(post_id)
     setFormValues(res)
 }
 

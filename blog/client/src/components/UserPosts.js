@@ -41,9 +41,10 @@ function UserPosts(props) {
         // read all posts
         <div className="Posts">
             <h1>User Posts</h1>
+            <button type="button" onClick={handleClick}> Create New Post
+            </button>
             {post && post.map(post => (
                 <div>
-                    <p>{post.title}</p>
                     <p>{post.body}</p>
                 <Link to= {`/posts/${id}/${post.id}`}>Post</Link>
                 <br></br>
@@ -55,8 +56,7 @@ function UserPosts(props) {
                 </div>
                 
             ))}
-            <button type="button" onClick={handleClick}> Create New Post
-            </button>
+           
         </div>
 
     );
