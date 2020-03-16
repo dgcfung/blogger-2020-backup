@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { updateUser } from '../api-helper'
-import { Redirect } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { updateUser, readUser } from '../api-helper'
+// import { Redirect } from 'react-router-dom'
 
 function EditProfile(props) {
     let id = props.match.params.user_id
@@ -11,7 +11,7 @@ function EditProfile(props) {
         interests: '',
         password: ''
     })
-    const [updated, setUpdate] = useState(false)
+    // const [updated, setUpdate] = useState(false)
 
 
     const handleChange = (e) => {
@@ -31,23 +31,31 @@ function EditProfile(props) {
 
     }
 
+    const getUserInfo = async()=>{
+        let res = await readUser(id)
+        setFormValues(res)
+    }
+
+    useEffect(() => {
+        getUserInfo()
+
+    }, [])
+
     return (
         <form onChange={handleChange}
             onSubmit={handleSubmit}
         >
             <h1>Edit Profile</h1>
-            <p>email:</p>
-
             <p>Age:</p>
-            <input name="age" className="post-title" placeholder="Age" value={formValues.age} />
+            <input type="text" name="age" className="post-title" placeholder="Age" value={formValues.age} />
             <p>Gender:</p>
-            <input name="gender" className="post-body" placeholder="Gender" value={formValues.gender} />
+            <input type="text" name="gender" className="post-body" placeholder="Gender" value={formValues.gender} />
             <p>Location:</p>
-            <input name="location" className="post-title" placeholder="Location" value={formValues.location}></input>
+            <input type="text" name="location" className="post-title" placeholder="Location" value={formValues.location}></input>
             <p>Interests</p>
-            <input name="interests" className="post-body" placeholder="Interests" value={formValues.interests}></input>
+            <input type="text" name="interests" className="post-body" placeholder="Interests" value={formValues.interests}></input>
             <p>Password</p>
-            <input type="password" name="password" className="post-body" placeholder="passwor" value={formValues.password}></input>
+            <input type="password" name="password" className="post-body" placeholder="password" value={formValues.password}></input>
             <button className="button">Send</button>
 
         </form>

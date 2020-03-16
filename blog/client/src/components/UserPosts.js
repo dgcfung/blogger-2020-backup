@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from 'react'
 // import {BrowserRouter, Link} from 'react-router-dom'
 import axios from 'axios'
-import {
-    BrowserRouter as Router,
-    NavLink,
-    Route,
-    Link
-} from 'react-router-dom'
 import { readAllUserPosts } from '../api-helper'
 
 function UserPosts(props) {
@@ -15,7 +9,6 @@ function UserPosts(props) {
 
     console.log(props)
     let id = props.match.params.user_id
-    const linkId = `/posts/${id}/create`
 
     function handleClick() {
         props.history.push(`/posts/${id}/create`);
@@ -37,13 +30,13 @@ function UserPosts(props) {
 
     console.log(post, 'line 38')
 
-    // const deletePost = async (id) => {
-    //     let del = await axios({
-    //         method: 'delete',
-    //         url: `http://localhost:3000/posts/${id}`,
-    //         headers: {Authorization: `Bearer ${localStorage.getItem('authToken')}` }
-    //     })
-    // }
+    const deletePost = async (id) => {
+        let del = await axios({
+            method: 'delete',
+            url: `http://localhost:3000/posts/${id}`,
+            headers: {Authorization: `Bearer ${localStorage.getItem('authToken')}` }
+        })
+    }
 
 
     return (
@@ -54,7 +47,8 @@ function UserPosts(props) {
                 <div>
                     <p>{post.title}</p>
                     <p>{post.body}</p>
-                {/* <button onClick={deletePost(post.id)}>Delete Post</button> */}
+                {/* <>Edit Post</button> */}
+                <button onClick={()=>{deletePost(post.id)}}>Delete Post</button>
                 </div>
                 
             ))}

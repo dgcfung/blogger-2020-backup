@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { readUser, getUser, destroyUser } from '../api-helper'
+import { readUser } from '../api-helper'
 import axios from 'axios'
 
 function Profile(props) {

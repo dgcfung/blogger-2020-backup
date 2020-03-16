@@ -5,9 +5,9 @@ const baseURL = 'http://localhost:3000'
 // user create, CRUD'
 const api = axios.create({
   baseURL: baseURL,
-  headers: {
-    authorization: localStorage.getItem('authToken')
-  }
+  // headers: {
+  //   authorization: localStorage.getItem('authToken')
+  // }
 })
 
 
@@ -45,6 +45,7 @@ const readAllUsers = async () => {
 }
 
 const updateUser = async (id, data) => {
+  console.log(id)
   const resp = await api.put(`/users/${id}`, { data })
   return resp
 

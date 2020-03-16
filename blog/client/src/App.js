@@ -9,26 +9,26 @@ import SignUp from './components/SignUp'
 import Profile from './components/Profile'
 import EditProfile from './components/EditProfile'
 import Post from './components/Post'
-import EditPost from './components/EditPost'
 import UserPosts from './components/UserPosts'
 import CreateNewPost from './components/CreateNewPost'
-import Comment from './components/Comment'
+// import Comment from './components/Comment'
 import CreateComment from './components/CreateComment'
 
 
 import {
   registerUser,
   loginUser,
-  createUser,
-  readAllUsers,
-  updateUser,
-  destroyUser,
-  createPost,
-  createComment,
-  readAllUserPosts,
-  readAllPosts,
-  updatePost,
-  destroyPost
+  verifyUser,
+  // createUser,
+  // readAllUsers,
+  // updateUser,
+  // destroyUser,
+  // createPost,
+  // createComment,
+  // readAllUserPosts,
+  // readAllPosts,
+  // updatePost,
+  // destroyPost
 } from './api-helper'
 
 
@@ -68,8 +68,11 @@ handleSignIn = async(e)=>{
    
 }
 
+componentDidMount(){
+  verifyUser()
+}
+
 render () {
-  console.log(this.props)
   let {email, password} =this.state.authFormData
   return (
       <React.Fragment>
