@@ -27,7 +27,6 @@ function Profile(props) {
             url: `http://localhost:3000/users/${id}`,
             headers: {Authorization: `Bearer ${localStorage.getItem('authToken')}` }
         })
-        console.log('User deleted')
         history.push(`/`)
     }
 

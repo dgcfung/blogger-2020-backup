@@ -4,7 +4,6 @@ import axios from 'axios'
 import { readAllUserPosts } from '../api-helper'
 
 function UserPosts(props) {
-    console.log(props)
     const [post, setPost] = useState()
 
     let id = props.match.params.user_id
@@ -16,11 +15,10 @@ function UserPosts(props) {
     const readPosts = async () => {
         let posts = await readAllUserPosts(id)
         setPost(posts)
-        console.log(posts)
     }
 
     useEffect(() => {
-        
+
         readPosts()
     }, [])
 
@@ -28,10 +26,9 @@ function UserPosts(props) {
         let del = await axios({
             method: 'delete',
             url: `http://localhost:3000/posts/${id}`,
-            // if not ran on localhost:3000
-            // user4 can delete user 1's posts
-            headers: {Authorization: `Bearer ${localStorage.getItem('authToken')}` }
-            
+
+            headers: { Authorization: `Bearer ${localStorage.getItem('authToken')}` }
+
         })
         readPosts()
     }
@@ -46,17 +43,17 @@ function UserPosts(props) {
             {post && post.map(post => (
                 <div>
                     <p>{post.body}</p>
-                <Link to= {`/posts/${id}/${post.id}`}>Post</Link>
-                <br></br>
-                <Link to = {`/posts/${id}/${post.id}/edit`} >Edit Post</Link>
-                <br></br>
-                <button onClick={()=>{deletePost(post.id)}}>Delete Post</button>
-                <br></br>
-                <br></br>
+                    <Link to={`/posts/${id}/${post.id}`}>Post</Link>
+                    <br></br>
+                    <Link to={`/posts/${id}/${post.id}/edit`} >Edit Post</Link>
+                    <br></br>
+                    <button onClick={() => { deletePost(post.id) }}>Delete Post</button>
+                    <br></br>
+                    <br></br>
                 </div>
-                
+
             ))}
-           
+
         </div>
 
     );

@@ -5,7 +5,7 @@ const baseURL = 'http://localhost:3000'
 // user create, CRUD'
 const api = axios.create({
   baseURL: baseURL,
-  
+
 })
 
 
@@ -57,16 +57,15 @@ export const readUser = async (id) => {
 const destroyUser = async (id) => {
   const resp = await api.delete(`/users/${id}`)
   return resp.data
-  console.log(resp.status)
 }
 
 const createPost = async (id, post) => {
-  const res = await api.post(`/users/${id}/posts`, {post})
+  const res = await api.post(`/users/${id}/posts`, { post })
   return res
 }
 
-export const createComment= async(id, formValues)=>{
-  const res = await api.post(`/users/:${id}/comment`, {formValues})
+export const createComment = async (id, formValues) => {
+  const res = await api.post(`/users/:${id}/comment`, { formValues })
   return res
 }
 
@@ -90,7 +89,7 @@ const readAPost = async (id) => {
 
 //   check route
 const updatePost = async (post_id, post) => {
-  const resp = await api.put(`/posts/${post_id}`, {post})
+  const resp = await api.put(`/posts/${post_id}`, { post })
   return resp.data
 }
 
@@ -112,7 +111,5 @@ export {
   updatePost,
   readAPost,
   destroyPost,
-  
-
 
 }

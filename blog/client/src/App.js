@@ -11,8 +11,6 @@ import EditProfile from './components/EditProfile'
 import Post from './components/Post'
 import UserPosts from './components/UserPosts'
 import CreateNewPost from './components/CreateNewPost'
-// import Comment from './components/Comment'
-// import CreateComment from './components/CreateComment'
 import EditPost from './components/EditPost'
 
 
@@ -20,16 +18,6 @@ import {
   registerUser,
   loginUser,
   verifyUser,
-  // createUser,
-  // readAllUsers,
-  // updateUser,
-  // destroyUser,
-  // createPost,
-  // createComment,
-  // readAllUserPosts,
-  // readAllPosts,
-  // updatePost,
-  // destroyPost
 } from './api-helper'
 
 
@@ -94,8 +82,7 @@ class App extends React.Component {
           <Route exact path="/posts/:user_id/create" component={CreateNewPost} />
           <Route exact path="/posts/:user_id/:post_id" component={Post} />
           <Route exact path="/posts/:user_id/:post_id/edit" component={EditPost} />
-          {/* <Route exact path="/posts/comments/create" component={CreateComment} /> */}
-          
+
         </Switch>
         <Footer />
       </React.Fragment>
