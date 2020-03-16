@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import {BrowserRouter, Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { readAllUserPosts } from '../api-helper'
 
@@ -7,18 +7,11 @@ function UserPosts(props) {
 
     const [post, setPost] = useState()
 
-    console.log(props)
     let id = props.match.params.user_id
 
     function handleClick() {
         props.history.push(`/posts/${id}/create`);
     }
-
-    // const readPosts = async () => {
-    //     let posts = await readAllUserPosts(id)
-    //     console.log(posts)
-    //     // need to map posts
-    // }
 
     useEffect(() => {
         const readPosts = async () => {
@@ -27,8 +20,6 @@ function UserPosts(props) {
         }
         readPosts()
     }, [])
-
-    console.log(post, 'line 38')
 
     const deletePost = async (id) => {
         let del = await axios({
@@ -47,7 +38,8 @@ function UserPosts(props) {
                 <div>
                     <p>{post.title}</p>
                     <p>{post.body}</p>
-                {/* <>Edit Post</button> */}
+                <Link to= '/'>Post</Link>
+                <Link to = '/posts/:user_id/:post_id/edit' >Edit Post</Link>
                 <button onClick={()=>{deletePost(post.id)}}>Delete Post</button>
                 </div>
                 

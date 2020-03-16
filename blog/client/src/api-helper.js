@@ -76,8 +76,6 @@ const readAllUserPosts = async (id) => {
   const resp = await api.get(`/all_posts`)
   console.log(resp)
   return resp.data
-
-  // /users/:user_id/posts(.:format) 
 }
 
 //   need check route
@@ -87,8 +85,8 @@ const readAllPosts = async () => {
 }
 
 //   check route
-const updatePost = async (user_id, post_id) => {
-  const resp = await api.post(`/posts/${user_id}/edit/${post_id}`)
+const updatePost = async (user_id, post_id, formValues) => {
+  const resp = await api.post(`/posts/${user_id}/${post_id}/edit`, {formValues})
   return resp.data
 }
 

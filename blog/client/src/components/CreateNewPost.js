@@ -5,14 +5,12 @@ import { useHistory } from 'react-router-dom'
 
 function CreateNewPost (props){
     let history = useHistory()
-    console.log(props)
     let id = props.match.params.user_id
     
     const [formValues, setFormValues] = useState({
         title: '',
         body: ''
     })
-    // const [created, createPost] = useState(false)
 
 
     const handleChange =(e)=> {
@@ -26,11 +24,8 @@ function CreateNewPost (props){
     const handleSubmit = async(e) => {
         e.preventDefault()
         let res = await createPost(id, formValues)
-        console.log(res)
         if(res.status === 201){
-            console.log(res.status)
             let postId= res.data.id
-            console.log(postId)
         history.push(`/posts/all/${id}`)
         }
 

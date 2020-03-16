@@ -13,6 +13,7 @@ import UserPosts from './components/UserPosts'
 import CreateNewPost from './components/CreateNewPost'
 // import Comment from './components/Comment'
 import CreateComment from './components/CreateComment'
+import EditPost from './components/EditPost'
 
 
 import {
@@ -91,6 +92,7 @@ render () {
         <Route exact path= "/posts/:user_id/create" component={CreateNewPost}/>
         <Route exact path="/posts/all/:user_id" component={UserPosts}/>
         <Route exact path= "/posts/comments/create" component= {CreateComment}/>
+        <Route exact path= "/posts/:user_id/:post_id/edit" component= {EditPost}/>
         <Footer/>
       </React.Fragment>
   );

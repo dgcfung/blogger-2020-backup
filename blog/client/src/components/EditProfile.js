@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { updateUser, readUser } from '../api-helper'
-// import { Redirect } from 'react-router-dom'
 
 function EditProfile(props) {
     let id = props.match.params.user_id
@@ -11,7 +10,6 @@ function EditProfile(props) {
         interests: '',
         password: ''
     })
-    // const [updated, setUpdate] = useState(false)
 
 
     const handleChange = (e) => {
