@@ -71,7 +71,6 @@ export const createComment = async (id, formValues) => {
 
 const readAllUserPosts = async (id) => {
   const resp = await api.get(`/all_posts`)
-  console.log(resp)
   return resp.data
 }
 

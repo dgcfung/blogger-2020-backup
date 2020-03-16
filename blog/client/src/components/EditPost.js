@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { updatePost, readAPost } from '../api-helper'
 
 function EditPost(props) {
-    console.log(props)
     let user_id = props.match.params.user_id
     let post_id = props.match.params.post_id
 
