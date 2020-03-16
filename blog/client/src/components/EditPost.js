@@ -44,7 +44,7 @@ return(
             onSubmit={handleSubmit}
         >
             <p>Body:</p>
-            <input type="text" name="body" className="post-body" placeholder="Gender" value={formValues.body} />
+            <input type="text" name="body" className="post-body" placeholder="Body" value={formValues.body} />
             <button className="button">Send</button>
 
 

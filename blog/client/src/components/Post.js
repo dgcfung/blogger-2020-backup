@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Post(props) {
+    console.log(props)
     let id = props.match.params.user_id
 
     return (

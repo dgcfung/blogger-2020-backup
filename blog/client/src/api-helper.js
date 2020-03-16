@@ -5,9 +5,7 @@ const baseURL = 'http://localhost:3000'
 // user create, CRUD'
 const api = axios.create({
   baseURL: baseURL,
-  // headers: {
-  //   authorization: localStorage.getItem('authToken')
-  // }
+  
 })
 
 

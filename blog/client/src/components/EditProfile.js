@@ -44,6 +44,7 @@ function EditProfile(props) {
             onSubmit={handleSubmit}
         >
             <h1>Edit Profile</h1>
+            <p>Please fill out all fields before clicking Submit.</p>
             <p>Age:</p>
             <input type="text" name="age" className="post-title" placeholder="Age" value={formValues.age} />
             <p>Gender:</p>

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :destroy]
+  before_action :set_user, only: [:show, :update, :destroy]
   before_action :authorize_request, only: [:update]
 
   # GET /users
@@ -27,11 +27,11 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users
   def update
-    puts @current_user.inspect
-    if @current_user.update(update_params)
-      render json: @current_user
+    # puts @current_user.inspect
+    if @user.update(update_params)
+      render json: @user
     else
-      render json: @current_user.errors, status: :unprocessable_entity
+      render json: @user.errors, status: :unprocessable_entity
     end
   end
 
