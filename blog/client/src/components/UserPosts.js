@@ -39,7 +39,7 @@ function UserPosts(props) {
         <div className="Posts">
              <Link to={`/profile/${id}`}>Return to Profile</Link>
             <h1>User Posts</h1>
-            <button type="button" onClick={handleClick}> Create New Post
+            <button type="button" onClick={handleClick}> Create Post
             </button>
             {post && post.map(post => (
                 <div>

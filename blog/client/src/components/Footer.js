@@ -5,7 +5,7 @@ render(){
 
     return(
         <div className= "footer">
-        <h1>©General Assembly, Donald Fung 2020</h1>
+        <h1 className="footer-title">©General Assembly, Donald Fung 2020</h1>
         </div>
     )
 }

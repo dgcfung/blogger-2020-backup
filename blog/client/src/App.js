@@ -64,6 +64,7 @@ class App extends React.Component {
   render() {
     let { email, password } = this.state.authFormData
     return (
+      <div className= "App">
       <React.Fragment>
 
         <Header currentUser={this.state.currentUser} />
@@ -86,6 +87,7 @@ class App extends React.Component {
         </Switch>
         <Footer />
       </React.Fragment>
+      </div>
     );
   }
 }

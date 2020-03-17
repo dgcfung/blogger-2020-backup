@@ -16,10 +16,12 @@ function SignIn(props) {
                 <p>Password:</p>
                 <input name="password" type="password" value={props.password} />
                 <hr />
-                <button>Sign In</button>
-                <Link to="/login/signup">Sign Up</Link>
+                <button className= "big-button">Sign In</button>
+               
 
             </form>
+            <br></br>
+            <Link to="/login/signup">Not a user? Sign Up here</Link>
         </div>
     )
 }

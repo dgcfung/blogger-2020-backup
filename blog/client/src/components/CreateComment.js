@@ -29,7 +29,7 @@ function CreateComment(props){
     <form onChange={handleChange}
     onSubmit={handleSubmit}>
     <input name="body" className="post-body" placeholder="Body" value= {formValues.body}/>
-    <button className="button">Send</button>
+    <button className="form-button">Send</button>
     </form>
   )
 }

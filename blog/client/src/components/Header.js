@@ -45,15 +45,15 @@ class Header extends React.Component {
 
     return (
 
-      <div className="App">
-
+      <div className="Header">
+        
         <div className="container" ref={this.container}>
 
 
-          <button type="button" className="button" onClick={this.handleButtonClick}>
+          <button type="button" className="hamburger-button" onClick={this.handleButtonClick}>
             ☰
           </button>
-          <h1 className="blogger-header">Blogger 2020</h1>
+         
 
           <p>Welcome {email}!</p>
           {this.state.open && (
@@ -70,6 +70,7 @@ class Header extends React.Component {
 
 
         </div>
+        <h1 className="blogger-header">Blogger 2020</h1>
       </div>
     );
 

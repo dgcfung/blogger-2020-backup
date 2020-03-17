@@ -43,7 +43,7 @@ function CreateNewPost(props) {
                 <p>Text:</p>
                 <input name="body" className="post-body" placeholder="Body" value={formValues.body} />
 
-                <button className="button">Send</button>
+                <button className="form-button">Send</button>
 
 
             </form>

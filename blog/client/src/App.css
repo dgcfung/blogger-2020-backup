@@ -1,36 +1,125 @@
+*{
+  font-family: Rubik;
+}
+
 .App {
   text-align: center;
-  background-color: orange;
+  background-color: black;
+  color:white;
+  font-family: Rubik;
 }
 
 
 /* header */
-.App{
- 
+.Header{
+    text-align: center;
     padding: 1vw;
-    border: 1vw solid #021a40;
+    border: 1vw solid orange;
 
 }
 
+.blogger-header{
+  text-align:center;
+  font-family: Rubik;
+  font-size: 5vw;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 7.5px;
+  text-align: center;
+  color: var(--white);
+}
+
+
 /* hamburger menu */
-.container { position: relative; display: flex; } .button { padding: 0; width: 50px; border: 0; background-color: #fff; color: #333; cursor: pointer; outline: 0; font-size: 40px; animation: App-logo-spin infinite 20s linear;}
+.container { position: relative; display: flex; } .hamburger-button { padding: 0; width: 40px; border: 0; color: #fff; background-color: #333; cursor: pointer; outline: 0; font-size: 40px; animation: App-logo-spin infinite 20s linear;}
 
 .dropdown { z-index: 100; float: left; position: absolute; top: 100%; left: 0; width: 300px; z-index: 2; border: 1px solid rgba(0, 0, 0, 0.04); box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14); } ul { list-style: none; padding: 0; margin: 0; } li { padding: 8px 12px; } li:hover { background-color: rgba(0, 0, 0, 0.14); cursor: pointer; }
 
-.blogger-header{ 
-text-align: center;
+
+
+/* input fields */
+input {
+  width: 20 vw;
+  padding: 1vw 2vw;
+  margin: 1vw 0;
+  box-sizing: border-box;
+  color:black;
+  background-color: white;
+}
+
+
+button{
+  margin: 2vw;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Rubik;
+}
+
+.big-button{
+  height: 5vw;
+  width: 20vw;
+  font-size: 2vw;
+  font-weight: bolder;
+}
+
+button:hover{
+  box-shadow: 0 4px 8px 0 white;
+  transition: scale(2);
+}
+
+
+/* links format */
+
+a:link {
+  font-size: 3vw;
+  color: orange;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  box-shadow: 0 4px 8px 0 orange;
+  transition: scale(1.5);
+}
+
+.footer-title{
+  text-align:center;
+  font-family: Rubik;
+  font-size: 3vw;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 7.5px;
+  text-align: center;
+  color: var(--white);
 }
 
 .footer{
-  background-color: orange;
+  /* background-color: orange; */
   padding: 1vw;
-    border: 1vw solid #021a40;
+  border: 1vw solid orange;
+}
+
+.About{
+  padding: 2vw;
+}
+
+p{
+  font-size: 3vw;
 }
 
 /* mobile tablet compatible. */
 @media (max-width:768px){
   *{
-    background-color: orange;
+    background-color: black;
   }
   .container{
    display: flex;
