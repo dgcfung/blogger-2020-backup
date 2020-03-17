@@ -8,8 +8,10 @@ class About extends React.Component {
     render() {
         return (
             <div>
-                <h1>About Blogger</h1>
+                <h1>About Blogger 2020</h1>
+                <p>Blogger 2020 is a newly designed app for the new generation</p>
                 <Link to="/login/sign_in">Sign In</Link>
+                <br></br>
                 <Link to="/login/signup">Sign Up</Link>
             </div>
 
