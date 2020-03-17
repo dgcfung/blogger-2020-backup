@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { updateUser, readUser } from '../api-helper'
+import {Link} from 'react-router-dom'
 
 function EditProfile(props) {
     let id = props.match.params.user_id
@@ -43,6 +44,7 @@ function EditProfile(props) {
         <form onChange={handleChange}
             onSubmit={handleSubmit}
         >
+            <Link to={`/profile/${id}`}>Return to Profile</Link>
             <h1>Edit Profile</h1>
             <p>Please fill out all fields before clicking Submit.</p>
             <p>Age:</p>

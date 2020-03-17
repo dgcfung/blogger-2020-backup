@@ -37,13 +37,13 @@ function UserPosts(props) {
     return (
         // read all posts
         <div className="Posts">
+             <Link to={`/profile/${id}`}>Return to Profile</Link>
             <h1>User Posts</h1>
             <button type="button" onClick={handleClick}> Create New Post
             </button>
             {post && post.map(post => (
                 <div>
                     <p>{post.body}</p>
-                    <Link to={`/posts/${id}/${post.id}`}>Post</Link>
                     <br></br>
                     <Link to={`/posts/${id}/${post.id}/edit`} >Edit Post</Link>
                     <br></br>
