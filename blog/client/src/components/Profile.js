@@ -36,6 +36,9 @@ function Profile(props) {
             <h1>Profile</h1>
             <p>Blogger 2020 Member ID:</p>
             {id}
+            <br></br>
+            <br></br>
+            <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4080540331548233623-256.png"/>
             <p>Email: {user.email}</p>
             <p>Age: {user.age}</p>
             <p>Location: {user.location}</p>
