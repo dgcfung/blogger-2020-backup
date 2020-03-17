@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { readUser } from '../api-helper'
 import axios from 'axios'
@@ -25,14 +25,14 @@ function Profile(props) {
         let del = await axios({
             method: 'delete',
             url: `http://localhost:3000/users/${id}`,
-            headers: {Authorization: `Bearer ${localStorage.getItem('authToken')}` }
+            headers: { Authorization: `Bearer ${localStorage.getItem('authToken')}` }
         })
         history.push(`/`)
     }
 
     return (
         <div>
-
+            <Link to="/">About</Link>
             <h1>Profile</h1>
             {id}
             <p>Email: {user.email}</p>
