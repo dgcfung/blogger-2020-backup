@@ -43,8 +43,9 @@ function EditPost(props) {
             <Link to={`/posts/all/${user_id}`}>Back to Posts</Link>
 
             <p>Body:</p>
-            <input type="text" name="body" className="post-body" placeholder="Body" value={formValues.body} />
-            <button className="form-button">Send</button>
+            <input type="text" name="body" className="text-body" placeholder="Body" value={formValues.body} />
+            <br></br>
+            <button className="big-button">Send</button>
 
 
         </form>

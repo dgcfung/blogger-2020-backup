@@ -71,6 +71,11 @@ button:hover{
   transition: scale(2);
 }
 
+.text-body{
+  width: 60vw;
+  height: 30vw;
+}
+
 
 /* links format */
 
