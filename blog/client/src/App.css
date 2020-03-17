@@ -1,5 +1,6 @@
 *{
   font-family: Rubik;
+
 }
 
 .App {
@@ -33,9 +34,47 @@
 
 
 /* hamburger menu */
-.container { position: relative; display: flex; } .hamburger-button { padding: 0; width: 40px; border: 0; color: #fff; background-color: #333; cursor: pointer; outline: 0; font-size: 40px; animation: App-logo-spin infinite 20s linear;}
+.container { 
+  position: relative; 
+  display: flex; 
+} 
 
-.dropdown { z-index: 100; float: left; position: absolute; top: 100%; left: 0; width: 300px; z-index: 2; border: 1px solid rgba(0, 0, 0, 0.04); box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14); } ul { list-style: none; padding: 0; margin: 0; } li { padding: 8px 12px; } li:hover { background-color: rgba(0, 0, 0, 0.14); cursor: pointer; }
+.hamburger-button { 
+  padding: 0; 
+  width: 40px; 
+  border: 0; 
+  color: #fff; 
+  background-color: #333; 
+  cursor: pointer; 
+  outline: 0; 
+  font-size: 40px; 
+}
+
+.dropdown { 
+  z-index: 100; 
+  float: left; 
+  position: absolute; 
+  top: 100%; 
+  left: 0; 
+  width: 400px; 
+  z-index: 2; 
+  border: 1px solid rgba(0, 0, 0, 0.04); 
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14); } 
+  
+  ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+  } 
+    
+    li { 
+      padding: 8px 12px; 
+    } 
+    li:hover { 
+      background-color: rgba(0, 0, 0, 0.14); cursor: pointer; 
+    }
+
+  /* end of hamburger menu */
 
 
 
@@ -72,15 +111,15 @@ button:hover{
 }
 
 .text-body{
-  width: 60vw;
-  height: 30vw;
+  width: 50vw;
+  height: 20vw;
 }
 
 
 /* links format */
 
 a:link {
-  font-size: 3vw;
+  font-size: 4vw;
   color: orange;
   text-decoration: none;
 }
@@ -128,8 +167,17 @@ p{
 
 /* mobile tablet compatible. */
 @media (max-width:768px){
-  *{
-    background-color: black;
+  .blogger-header{
+    font-size: 12vw;
+  }
+
+  a:link {
+    font-size: 5vw;
+  }
+
+  input{
+    width: 50vw;
+    height: 10vw;
   }
 
   .container{
@@ -138,4 +186,54 @@ p{
    flex-wrap: nowrap;
   }
 
+  .dropdown{
+    background-color: white;
+    color:black;
+  }
+
+  p{
+    font-size: 5vw;;
+  }
+
+  button{
+    width: 30vw;
+    height:9vw;
+    font-size: 3vw;
+  }
+
+  .big-button{
+    width: 40vw;
+    height: 9vw;
+    font-size: 5vw;
+  }
+
 }
+
+@media (max-width:375px){
+.blogger-header{
+  font-size: 12vw;
+}
+
+a:link {
+  font-size: 6vw;
+}
+
+.dropdown{
+  background-color: white;
+  color:black;
+}
+
+p{
+  font-size: 4vw;
+}
+
+.big-button{
+  width: 50vw;
+  height: 9vw;
+  font-size: 6vw;
+}
+
+}
+
+/* add 4-6 or more items to media query on each query, focuz on sizes after. */
+/* add additional medai-queries */

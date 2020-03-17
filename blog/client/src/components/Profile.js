@@ -31,7 +31,7 @@ function Profile(props) {
     }
 
     return (
-        <div>
+        <div className= "Profile">
             <Link to="/">About</Link>
             <h1>Profile</h1>
             <p>Blogger 2020 Member ID:</p>
