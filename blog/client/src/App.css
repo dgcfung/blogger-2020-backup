@@ -215,14 +215,14 @@ p{
   float: left;
   position: relative;
   text-align: left;
-  left:10vw;
+  left:15vw;
 }
 
 .right{
   float:right;
   position: relative;
   text-align: left;
-  right:10vw;
+  right:15vw;
 }
 
 .bottom{
