@@ -76,6 +76,39 @@
 
   /* end of hamburger menu */
 
+  /* posts */
+  .post{
+    text-align: start;
+    padding: 0 5vw 0 5vw;
+  }
+
+  /* about page */
+  .about-paragraph{
+    text-align: start;
+    padding: 0 5vw 0 5vw;
+    display: block;
+  }
+
+  .sign-in{
+    display:block;
+    float: left;
+    position: relative;
+    /* text-align: left; */
+    padding: 0 15vw 0 15vw;
+    /* column-gap: 10vw; */
+    bottom: 3vw;
+  }
+
+  .sign-up{
+    display:block;
+    float: right;
+    position: relative;
+    /* text-align: right; */
+    padding: 0 10vw 0 10vw;
+    right: 10vw;
+    bottom:3vw;
+    
+  }
 
 
 /* input fields */
@@ -83,6 +116,7 @@ input {
   width: 20 vw;
   padding: 1vw 2vw;
   margin: 1vw 0;
+  font-size: 1.5vw;
   box-sizing: border-box;
   color:black;
   background-color: white;
@@ -90,6 +124,9 @@ input {
 
 
 button{
+  height: 5vw;
+  width: 15vw;
+  font-size: 1.5vw;
   margin: 2vw;
   background-color: orange;
   color: white;
@@ -161,14 +198,47 @@ img{
   padding: 2vw;
 }
 
-p{
-  font-size: 3vw;
+h1{
+  font-size: 4vw;
 }
+
+p{
+  font-size: 2.5vw;
+}
+
+/* profile columns */
+.icon{
+  display: block;
+}
+
+.left{
+  float: left;
+  position: relative;
+  text-align: left;
+  left:10vw;
+}
+
+.right{
+  float:right;
+  position: relative;
+  text-align: left;
+  right:10vw;
+}
+
+.bottom{
+  clear: both;
+}
+
+
 
 /* mobile tablet compatible. */
 @media (max-width:768px){
   .blogger-header{
     font-size: 12vw;
+  }
+
+  .footer{
+    font-size: 20vw;
   }
 
   a:link {
@@ -207,11 +277,33 @@ p{
     font-size: 5vw;
   }
 
+  .left{
+    float: left;
+    position: relative;
+    text-align: left;
+    left:5vw;
+  }
+  
+  .right{
+    float:right;
+    position: relative;
+    text-align: left;
+    right:5vw;
+  }
+  
+  .bottom{
+    clear: both;
+  }
+
 }
 
 @media (max-width:375px){
 .blogger-header{
   font-size: 12vw;
+}
+
+input{
+  font-size: 6vw;
 }
 
 a:link {

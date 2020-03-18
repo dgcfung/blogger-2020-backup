@@ -42,7 +42,7 @@ function UserPosts(props) {
             <button className= "big-button" type="button" onClick={handleClick}> Create Post
             </button>
             {post && post.map(post => (
-                <div>
+                <div className = "post">
                     <p>{post.body}</p>
                     <br></br>
                     <Link to={`/posts/${id}/${post.id}/edit`} >Edit Post</Link>
